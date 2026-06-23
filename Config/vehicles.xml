@@ -125,19 +125,12 @@
 		</property>
 		
 		<property class="storage">
-            <property name="class" value="Storage"/>
-            <property name="mod" value="storage"/>
-            <property name="modT" value=""/>
-          </property>
-		<!--
-		<property class="storage">
 			<property name="class" value="Storage"/>
 			<property name="display_name" value="basket"/>
 			<property name="slot_type" value="basket"/>
 			<property name="mesh" value="basket"/>
 			<property name="transform" value="basket"/>
 		</property>
-	-->
 	</vehicle>
 	
 	<vehicle name="HOVERBIKEFLY">
@@ -285,19 +278,12 @@
 			<property name="bright" value=".9"/>
 		</property>
 		<property class="storage">
-            <property name="class" value="Storage"/>
-            <property name="mod" value="storage"/>
-            <property name="modT" value=""/>
-          </property>
-		<!--
-		<property class="storage">
 			<property name="class" value="Storage"/>
 			<property name="display_name" value="basket"/>
 			<property name="slot_type" value="basket"/>
 			<property name="mesh" value="basket"/>
 			<property name="transform" value="basket"/>
 		</property>
-	-->
 		</vehicle>	
 	</append>
 </Witos>
