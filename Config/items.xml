@@ -1,0 +1,45 @@
+<Witos>
+	<append xpath="/items">
+
+	<item name="HOVERBIKEplaceable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="CreativeMode" value="Player"/>
+            <property name="DescriptionKey" value="vehicleargenevoPlaceableDesc"/>
+            <property name="CustomIcon" value="hover"/>
+			<property name="Tags" value="vehicle,varmor,vengine,vfuel,vlight,vstorage"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Hover.unity3d?hoverbike"/>
+			<property name="EconomicValue" value="50000"/>
+			<property name="TraderStageTemplate" value="vehicleTier5"/><!-- vehicleGyrocopterPlaceable -->
+			<property class="Action1">
+				<property name="Vehicle" value="HOVERBIKE"/>
+				<property name="VehicleSize" value="3, 3, 3"/>
+			</property>
+			<effect_group name="vehicleGyrocopterPlaceable" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="5"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="10000"/>
+			</effect_group>
+		</item>
+		
+	<item name="HOVERBIKEFLYplaceable">
+			<property name="Extends" value="vehicleMinibikePlaceable"/>
+			<property name="CreativeMode" value="Player"/>
+            <property name="DescriptionKey" value="vehicleargenevoPlaceableDesc"/>
+            <property name="CustomIcon" value="hover"/>
+			<property name="Tags" value="vehicle,varmor,vengine,vfuel,vlight,vstorage"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Hover.unity3d?hoverbike"/>
+			<property name="EconomicValue" value="50000"/>
+			<property name="TraderStageTemplate" value="vehicleTier5"/><!-- vehicleGyrocopterPlaceable -->
+			<property class="Action1">
+				<property name="Vehicle" value="HOVERBIKEFLY"/>
+				<property name="VehicleSize" value="3, 3, 3"/>
+			</property>
+			<effect_group name="vehicleGyrocopterPlaceable" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="5"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="20000"/>
+			</effect_group>
+		</item>
+
+	</append>
+</Witos>

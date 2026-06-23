@@ -1,0 +1,33 @@
+<Witos>
+	<append xpath="/Sounds">
+		<!-- Hoverbike -->
+		<SoundDataNode name="Hoverbike_idle">
+			<AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
+			<AudioClip ClipName="#@modfolder:Resources/Hover.unity3d?HoverbikeBajo" Loop="true"/>
+			<LocalCrouchVolumeScale value="50.0"/>
+			<CrouchNoiseScale value="50"/>
+			<NoiseScale value="50"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="0.001"/>
+		</SoundDataNode>		
+		<SoundDataNode name="Hoverbike_OFF">
+			<AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
+			<AudioClip ClipName="#@modfolder:Resources/Hover.unity3d?HoverbikeBajo" Loop="false"/>
+			<LocalCrouchVolumeScale value="50.0"/>
+			<CrouchNoiseScale value="50"/>
+			<NoiseScale value="50"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="0.001"/>
+		</SoundDataNode>		
+		<SoundDataNode name="Hoverbike_max_speed_lp">
+			<AudioSource name="@:Sounds/Prefabs/AudioSource_Vehicle.prefab"/>
+			<AudioClip ClipName="#@modfolder:Resources/Hover.unity3d?HoverbikeAlto" Loop="true"/>
+			<LocalCrouchVolumeScale value="150.0"/>
+			<CrouchNoiseScale value="150"/>
+			<NoiseScale value="150"/>
+			<MaxVoices value="10"/>
+			<MaxRepeatRate value="0.01"/>
+		</SoundDataNode>
+		
+	</append>
+</Witos>

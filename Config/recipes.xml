@@ -1,0 +1,20 @@
+<Witos>
+  <append xpath="/recipes">
+
+<recipe name="HOVERBIKEplaceable" count="1" craft_time="600" craft_area="workbench">
+				<ingredient name="vehicleTruck4x4Accessories" count="1"/>
+				<ingredient name="vehicleTruck4x4Chassis" count="1"/>
+				<ingredient name="resourceForgedSteel" count="500"/>
+				<ingredient name="resourceLegendaryParts" count="5"/>
+		</recipe>
+		
+<recipe name="HOVERBIKEFLYplaceable" count="1" craft_time="600" craft_area="workbench" >
+				<ingredient name="vehicleGyroCopterAccessories" count="1"/>
+				<ingredient name="vehicleGyroCopterChassis" count="1"/>
+				<ingredient name="resourceForgedSteel" count="500"/>
+				<ingredient name="resourceLegendaryParts" count="10"/>
+	</recipe>
+
+   </append>
+
+</Witos>

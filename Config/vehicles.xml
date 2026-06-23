@@ -1,0 +1,303 @@
+<Witos>
+	<append xpath="/vehicles">
+
+	<vehicle name="HOVERBIKE">
+		<property name="cameraDistance" value="3.5, 5"/>
+		<property name="cameraTurnRate" value=".2, .35"/>
+		<property name="upAngleMax" value="70"/>
+		<property name="upForce" value="2"/>
+		<property name="steerRate" value="200"/>
+		<property name="steerCenteringRate" value="80"/>
+		<property name="tiltAngleMax" value="10"/>
+		<property name="tiltThreshold" value="3"/>
+		<property name="tiltDampening" value=".22"/>
+		<property name="tiltDampenThreshold" value="8"/>
+		<property name="tiltUpForce" value="5"/>
+		<property name="motorTorque_turbo" value="3000, 2000, 20100, 4450"/>
+		<property name="velocityMax_turbo" value="30, 10, 50, 15"/>
+		<property name="brakeTorque" value="8000"/>
+		<property name="hopForce" value="1, .8"/>
+		<property name="unstickForce" value="1"/>
+		<property name="waterDrag_y_velScale_velMaxScale" value="1.7, .9, .1"/>
+		<property name="wheelPtlScale" value="1"/>
+		
+
+		<property name="hornSound" value="motorbike_horn"/>
+		
+
+		<property class="chassis">
+			<property name="class" value="Chassis"/>
+			<property name="paint" value="M"/>
+		</property>
+
+		<property class="engine">
+			<property name="paint" value="M/WingLeft"/>
+			<property name="class" value="Engine"/>
+			<property name="particleOn" value="Particles/p_on"/>
+			<property name="particleDamaged" value="Particles/p_damaged"/>
+			<property name="particleBroken" value="Particles/p_broken"/>
+			<property name="fuelKmPerL" value=".2"/>
+			<property name="foodDrain" value=".002,.0101"/><!-- driving/turbo, motorcycle -->
+
+			<property name="gear1" value="
+								500,2500, -2000,1000,2000, 500,9999,9999,
+								,
+								Hoverbike_idle,
+								0, .7, 1, .1, 0, 0, .1, Hoverbike_idle,
+								-.4, -.02, .3, .3, -.2, 9, .2, Hoverbike_max_speed_lp
+								"/>
+			<property name="sound_start" value="Hoverbike_idle"/>
+			<property name="sound_shut_off" value="Hoverbike_OFF"/>
+			<property name="sound_no_fuel_shut_off" value="Vehicles/Motorbike/motorbike_empty"/>
+		</property>
+						
+		<property class="fuelTank">
+			<property name="class" value="FuelTank"/>
+			<property name="capacity" value="120"/>
+		</property>
+
+		<property class="handlebars">
+			<property name="paint" value="M/WingRight"/>
+			<property name="class" value="Steering"/>
+			<property name="steerMaxAngle" value="0"/>
+			<property name="transform" value="M/handlebar"/>
+			<property name="IKHandLPosition" value="0,0.069,-0.414"/>
+			<property name="IKHandLRotation" value="0, 0.069, 9.0"/>
+			<property name="IKHandRPosition" value="0.0017,0.052,0.414"/>
+			<property name="IKHandRRotation" value="0, 0, 180.0"/>
+		</property>
+
+		<property class="seat0">
+			<property name="paint" value="M/WingMain"/>
+			<property name="class" value="Seat"/>
+			<property name="pose" value="50"/>
+			<property name="position" value="0.034,0.241,-0.190"/>
+			<property name="rotation" value="0, 0, 0"/>
+			<property name="exit" value="-.9,0,0 ~ .9,0,0 ~ 0,0,-1.5 ~ 0,0,1.6 ~ 0,1.5,0"/>
+			<property name="IKFootLPosition" value="-0.397,1.000, 0.707"/>
+			<property name="IKFootLRotation" value="297.9,0, 329.0"/>
+			<property name="IKFootRPosition" value="0.328,1.000, 0.707"/>
+			<property name="IKFootRRotation" value="301.0,15.5, 18.6"/>
+		</property>
+
+		<property class="wheel0">
+			<property name="steerTransform" value="M/WingMain"/>
+		</property>
+
+		<property class="wheel1">
+			<property name="steerTransform" value="M/WingLeft"/>
+		</property>
+		
+		<property class="wheel2">
+			<property name="steerTransform" value="M/WingRight"/>
+		</property>
+		
+		<property class="motor0">
+			<property name="engine" value="engine"/>
+			<property name="engineOffPer" value=".05"/>
+			<property name="turbo" value="1.35"/>
+			<property name="rpmAccel_min_max" value="0, .1"/>
+			<property name="rpmMax" value="8"/>
+			<property name="rpmDrag" value=".993"/>
+			<property name="trigger" value="inputForward"/>
+			<property name="type" value="spin"/>
+			<property name="transform" value="M/VentMain"/>
+			<property name="axis" value="2"/>
+		</property>
+		
+		<property class="motor1">
+			<property name="engine" value="engine"/>
+			<property name="engineOffPer" value=".05"/>
+			<property name="turbo" value="1.35"/>
+			<property name="rpmAccel_min_max" value="0, .1"/>
+			<property name="rpmMax" value="6"/>
+			<property name="rpmDrag" value=".693"/>
+			<property name="trigger" value="inputForward"/>
+			<property name="type" value="spin"/>
+			<property name="transform" value="M/VentSub"/>
+			<property name="axis" value="2"/>
+		</property>
+
+		<property class="headlight">
+			<property name="class" value="Headlight"/>
+			<property name="transform" value=""/>
+			<property name="bright" value=".9"/>
+		</property>
+		
+		<property class="storage">
+            <property name="class" value="Storage"/>
+            <property name="mod" value="storage"/>
+            <property name="modT" value=""/>
+          </property>
+		<!--
+		<property class="storage">
+			<property name="class" value="Storage"/>
+			<property name="display_name" value="basket"/>
+			<property name="slot_type" value="basket"/>
+			<property name="mesh" value="basket"/>
+			<property name="transform" value="basket"/>
+		</property>
+	-->
+	</vehicle>
+	
+	<vehicle name="HOVERBIKEFLY">
+			<property name="cameraDistance" value="8, 10"/>
+			<property name="cameraTurnRate" value=".2, .35"/>
+			<property name="motorTorque_turbo" value="500, 500, 1000, 1000"/>
+			<property name="velocityMax_turbo" value="15, 8, 21.5, 10"/>
+			<property name="brakeTorque" value="100"/>
+			<property name="steerRate" value="100"/>
+			<property name="steerCenteringRate" value="90"/>
+			<property name="tiltAngleMax" value="8"/>
+			<property name="tiltThreshold" value="5"/>
+			<property name="tiltDampening" value=".01"/>
+			<property name="tiltDampenThreshold" value="0"/>
+			<property name="tiltUpForce" value="1"/>
+			<property name="upAngleMax" value="60"/>
+			<property name="upForce" value=".5"/>
+			<property name="unstickForce" value="1"/>
+			<property name="airDrag_velScale_angVelScale" value=".997, .97"/>
+			<property name="waterDrag_y_velScale_velMaxScale" value="1.5, .9, 1"/>
+			<property name="waterLift_y_depth_force" value="1, .5, .1"/>
+			<property name="hornSound" value="truck_horn"/>
+			<property name="VehicleCameraSeat" value="true"/>
+			
+			<property class="chassis">
+			<property name="class" value="Chassis"/>
+			<property name="paint" value="M"/>
+			</property>
+			<property class="engine">
+			<property name="paint" value="M/WingLeft"/>
+			<property name="class" value="Engine"/>
+			<property name="particleOn" value="Particles/p_on"/>
+			<property name="particleDamaged" value="Particles/p_damaged"/>
+			<property name="particleBroken" value="Particles/p_broken"/>
+				<property name="foodDrain" value=".003,.003"/>
+				<property name="fuelKmPerL" value="0.15"/>
+			<property name="gear1" value="
+								500,2500, -2000,1000,2000, 500,9999,9999,
+								,
+								Hoverbike_idle,
+								0, .7, 1, .1, 0, 0, .1, Hoverbike_idle,
+								-.4, -.02, .3, .3, -.2, 9, .2, Hoverbike_max_speed_lp
+								"/>
+			<property name="sound_start" value="Hoverbike_idle"/>
+				<property name="sound_start" value="Hoverbike_idle"/>
+				<property name="sound_shut_off" value="Hoverbike_OFF"/>
+				<property name="sound_no_fuel_shut_off" value="Vehicles/Gyrocopter/gyrocopter_sputter"/>
+
+				<property name="mod" value="speed"/>
+			</property>
+			<property class="fuelTank">
+				<property name="class" value="FuelTank"/>
+				<property name="capacity" value="200"/>
+				<property name="mod" value="fueltank"/>
+			</property>
+		
+			<property class="handlebars">
+				<property name="paint" value="M/WingRight"/>
+				<property name="class" value="Steering"/>
+				<property name="steerMaxAngle" value="0"/>
+				<property name="transform" value="M/handlebar"/>
+				<property name="IKHandLPosition" value="0,0.069,-0.414"/>
+				<property name="IKHandLRotation" value="0, 0.069, 9.0"/>
+				<property name="IKHandRPosition" value="0.0017,0.052,0.414"/>
+				<property name="IKHandRRotation" value="0, 0, 180.0"/>
+			</property>
+
+			<property class="seat0">
+				<property name="paint" value="M/WingMain"/>
+				<property name="class" value="Seat"/>
+				<property name="pose" value="50"/>
+				<property name="position" value="0.034,0.241,-0.190"/>
+				<property name="rotation" value="0, 0, 0"/>
+				<property name="exit" value="-.9,0,0 ~ .9,0,0 ~ 0,0,-1.5 ~ 0,0,1.6 ~ 0,1.5,0"/>
+				<property name="IKFootLPosition" value="-0.397,1.000, 0.707"/>
+				<property name="IKFootLRotation" value="297.9,0, 329.0"/>
+				<property name="IKFootRPosition" value="0.328,1.000, 0.707"/>
+				<property name="IKFootRRotation" value="301.0,15.5, 18.6"/>
+			</property>
+
+			<property class="motor0">
+				<property name="rpmAccel_min_max" value=".01, .038"/>
+				<property name="rpmMax" value="4"/>
+				<property name="rpmDrag" value=".993"/>
+				<property name="trigger" value="vel"/>
+				<property name="type" value="spin"/>
+				<property name="transform" value="M/VentMain"/>
+				<property name="axis" value="2"/>
+			</property>
+			<property class="motor1">
+				<property name="engine" value="engine"/>
+				<property name="engineOffPer" value=".05"/>
+				<property name="turbo" value="1.35"/>
+				<property name="rpmAccel_min_max" value="0.01, .04"/>
+				<property name="rpmMax" value="8"/>
+				<property name="rpmDrag" value=".993"/>
+				<property name="trigger" value="inputForward"/>
+				<property name="type" value="spin"/>
+				<property name="transform" value="M/VentSub"/>
+				<property name="axis" value="2"/>
+			</property>
+			
+			<property class="force0">
+				<property name="trigger" value="motor0"/>
+				<property name="type" value="relative"/>
+				<property name="force" value="0, .195, 0"/>
+				<property name="ceiling" value="260, 280"/>
+			</property>
+			<property class="force1">
+				<property name="trigger" value="motor1"/>
+				<property name="type" value="relative"/>
+				<property name="force" value="0, 0, .185"/>
+			</property>
+			<property class="force2">
+				<property name="trigger" value="inputForward"/>
+				<property name="type" value="relative"/>
+				<property name="force" value="0, 0.005, .00"/>
+			</property>
+			<property class="force3">
+				<property name="trigger" value="inputStrafe"/>
+				<property name="type" value="relativeTorque"/>
+				<property name="force" value="0, .007, 0"/>
+			</property>
+			<property class="force4">
+				<property name="trigger" value="inputUp"/>
+				<property name="type" value="relativeTorque"/>
+				<property name="force" value="-.012, 0, 0"/>
+			</property>
+			<property class="force5">
+				<property name="trigger" value="inputDown"/>
+				<property name="type" value="relativeTorque"/>
+				<property name="force" value=".012, 0, 0"/>
+			</property>
+		
+		<property class="wheel0">
+			<property name="steerTransform" value="M/WingMain"/>
+		</property>
+
+		<property class="wheel1">
+
+		</property>
+		<property class="headlight">
+			<property name="class" value="Headlight"/>
+			<property name="transform" value=""/>
+			<property name="bright" value=".9"/>
+		</property>
+		<property class="storage">
+            <property name="class" value="Storage"/>
+            <property name="mod" value="storage"/>
+            <property name="modT" value=""/>
+          </property>
+		<!--
+		<property class="storage">
+			<property name="class" value="Storage"/>
+			<property name="display_name" value="basket"/>
+			<property name="slot_type" value="basket"/>
+			<property name="mesh" value="basket"/>
+			<property name="transform" value="basket"/>
+		</property>
+	-->
+		</vehicle>	
+	</append>
+</Witos>

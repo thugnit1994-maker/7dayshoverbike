@@ -1,0 +1,57 @@
+<Witos>
+<append xpath="/entity_classes">
+
+<entity_class name="HOVERBIKE">
+	<property name="Class" value="EntityMotorcycle"/>
+	<property name="Tags" value="vehicle,usesGas"/>
+	<property name="Parent" value="Cars"/>
+	<property name="Prefab" value="#@modfolder:Resources/Hover.unity3d?hoverbike"/>
+	<property name="ModelType" value="Standard"/>
+    <property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehicleGyrocopter"/>
+	<property name="IsEnemyEntity" value="false"/>	
+	<property class="Explosion">
+		<property name="ParticleIndex" value="28"/>
+		<property name="RadiusBlocks" value="3"/>
+		<property name="RadiusEntities" value="3"/>
+		<property name="BlockDamage" value="30"/>
+		<property name="EntityDamage" value="30"/>
+			<property class="DamageBonus">
+				<property name="earth" value="0"/>
+			</property>
+	</property>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="hovermap"/>
+	<property name="NavObject" value="hovermap" />
+</entity_class>
+		
+<entity_class name="HOVERBIKEFLY">
+    <property name="Class" value="EntityVGyroCopter"/>
+	<property name="Tags" value="vehicle,usesGas"/>
+	<property name="Parent" value="Cars"/>
+	<property name="Prefab" value="#@modfolder:Resources/Hover.unity3d?hoverbike"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehicleGyrocopter"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property class="Explosion">
+		<property name="ParticleIndex" value="28"/>
+		<property name="RadiusBlocks" value="3"/>
+		<property name="RadiusEntities" value="3"/>
+		<property name="BlockDamage" value="30"/>
+		<property name="EntityDamage" value="30"/>
+			<property class="DamageBonus">
+				<property name="earth" value="0"/>
+			</property>
+	</property>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="hovermap"/>
+	<property name="NavObject" value="hovermap" />
+</entity_class>
+		
+	</append>
+</Witos>
